@@ -75,20 +75,25 @@
         </section>
 
         <section class="col-md-8 bg-white p-4 d-flex flex-column">
-        <header class="text-center mb-4">
-            <h1 id="todays_date">Day</h1>
-            <p id="dayFact" class="text-muted fst-italic">
-            Loading fun fact about today...
-            </p>
-        </header>
 
-        <div class="flex-grow-1">
-            <h2>Planned Events</h2>
-            <ul id="eventList" class="list-group mt-3">
-            <li class="list-group-item">Meeting with Sarah at 10 AM</li>
-            <li class="list-group-item">Doctor’s Appointment at 2 PM</li>
-            </ul>
-        </div>
+            <header class="text-center mb-4">
+                <h1 id="todays_date">Day</h1>
+                <p id="dayFact" class="text-muted fst-italic">
+                Loading fun fact about today...
+                </p>
+            </header>
+
+            <div class="flex-grow-1">
+                <h2>Planned Events</h2>
+
+                <ul id="eventList" class="list-group mt-3">
+                </ul>
+
+                <div class="input-group mt-3">
+                <input type="text" id="newEventInput" class="form-control" placeholder="Enter new event">
+                <button id="addEventBtn" class="btn btn-primary">Add Event</button>
+                </div>
+            </div>
         </section>
         </div>
     </main>
