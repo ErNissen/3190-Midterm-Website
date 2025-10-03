@@ -28,3 +28,77 @@ addEventBtn.addEventListener("click", () => {
     newEventInput.value = "";
   }
 });
+
+/* DOES NOT WORK with web browser privacy services active
+if(navigator.geolocation){
+    navigator.geolocation.getCurrentPosition(
+        (position) => {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            console.log(
+                `clatitude: ${latitudde}, longitude: ${longitude}`,
+                "color: green"
+            )
+            getEndpoints(latitude, longitude)
+        },
+        (error) => {
+            console.error(`%cError getting location: ${error.message}`,
+                "color: red",
+            )
+        }
+    )
+}
+else{
+    console.error(
+        "%cGeolocation is not supported by this browser.",
+        "color: red"
+    )
+}*/
+
+//Ames, IA coordinates
+getEndpoints(42.026798, -93.620178)
+
+async function getEndpoints(latitude, longitude){
+    try{
+        const response = await fetch(
+            `https://api.weather.gov/points/${latitude},${longitude}`
+        )
+
+        if(!response.ok){
+            throw new Error(
+                `Fetching endpoints failed. Network response ${response.status}`
+            )
+        }
+
+        const data = await response.json();
+
+        const office = data.properties.gridId;
+        const gridX = data.properties.gridX;
+        const gridY = data.properties.gridY;
+
+        getForecast(office, gridX, gridY);
+    }
+    catch(error){
+        console.error(`%c${error.message}`, "color: red")
+    }
+}
+
+async function getForecast(office, gridX, gridY){
+    try{
+        const response = await fetch(
+            `https://api.weather.gov/gridpoints/${office}/${gridX},${gridY}/forecast`
+        )
+        
+        if(!response.ok){
+            `Fetching forecast failed. Network response: ${response.status}`
+        }
+        
+        const data = await response.json()
+
+        //view weather information in console
+        console.log(data)
+    }
+    catch (error){
+        console.error(`%c${error.message}`, "color: red");
+    }
+}
