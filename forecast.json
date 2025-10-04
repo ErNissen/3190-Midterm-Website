@@ -1,0 +1,83 @@
+{
+    "hourly": [
+        {
+            "hour": "12:00 AM",
+            "temperature": "71",
+            "precip": "1",
+            "weather": "Clear"
+        },
+        {
+            "hour": "1:00 AM",
+            "temperature": "70",
+            "precip": "1",
+            "weather": "Clear"
+        },
+        {
+            "hour": "2:00 AM",
+            "temperature": "69",
+            "precip": "1",
+            "weather": "Clear"
+        },
+        {
+            "hour": "3:00 AM",
+            "temperature": "68",
+            "precip": "2",
+            "weather": "Clear"
+        },
+        {
+            "hour": "4:00 AM",
+            "temperature": "67",
+            "precip": "3",
+            "weather": "Clear"
+        },
+        {
+            "hour": "5:00 AM",
+            "temperature": "67",
+            "precip": "3",
+            "weather": "Partly Cloudy"
+        },
+        {
+            "hour": "6:00 AM",
+            "temperature": "66",
+            "precip": "4",
+            "weather": "Partly Cloudy"
+        }
+    ],
+    "5day":[
+        {
+            "day": "Monday",
+            "temphigh": "62",
+            "templow": "47",
+            "precip": "73",
+            "weather": "Rain"
+        },
+        {
+            "day": "Tuesday",
+            "temphigh": "66",
+            "templow": "41",
+            "precip": "24",
+            "weather": "Partly Cloudy"
+        },
+        {
+            "day": "Wednesday",
+            "temphigh": "68",
+            "templow": "45",
+            "precip": "4",
+            "weather": "Sunny"
+        },
+        {
+            "day": "Thursday",
+            "temphigh": "70",
+            "templow": "53",
+            "precip": "23",
+            "weather": "Partly Cloudy"
+        },
+        {
+            "day": "Friday",
+            "temphigh": "74",
+            "templow": "46",
+            "precip": "13",
+            "weather": "Partly Cloudy"
+        }
+    ]
+}
