@@ -1,49 +1,5 @@
 {
-    "hourly": [
-        {
-            "hour": "12:00 AM",
-            "temperature": "71",
-            "precip": "1",
-            "weather": "Clear"
-        },
-        {
-            "hour": "1:00 AM",
-            "temperature": "70",
-            "precip": "1",
-            "weather": "Clear"
-        },
-        {
-            "hour": "2:00 AM",
-            "temperature": "69",
-            "precip": "1",
-            "weather": "Clear"
-        },
-        {
-            "hour": "3:00 AM",
-            "temperature": "68",
-            "precip": "2",
-            "weather": "Clear"
-        },
-        {
-            "hour": "4:00 AM",
-            "temperature": "67",
-            "precip": "3",
-            "weather": "Clear"
-        },
-        {
-            "hour": "5:00 AM",
-            "temperature": "67",
-            "precip": "3",
-            "weather": "Partly Cloudy"
-        },
-        {
-            "hour": "6:00 AM",
-            "temperature": "66",
-            "precip": "4",
-            "weather": "Partly Cloudy"
-        }
-    ],
-    "5day":[
+    "fiveday":[
         {
             "day": "Monday",
             "temphigh": "62",

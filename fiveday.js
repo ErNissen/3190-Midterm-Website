@@ -8,9 +8,9 @@ fetch("forecast.json")
     .catch(function (err){
         console.log('error: ' + err);
     });
-
+    
 function appendData(data){
-    for(let i = 0; i<data.hourly.length; i++){
+    for(let i = 0; i<data.fiveday.length; i++){
         let mainContainer = document.getElementById("hourCard");
         let div = document.createElement("div");
         div.innerHTML = `
@@ -19,10 +19,11 @@ function appendData(data){
                     <div class="card-body">
                         <table>
                             <tr>
-                                <td>${data.hourly[i].hour}</td>
-                                <td>Temperature: ${data.hourly[i].temperature}°F</td>
-                                <td>Precipitation Chance: ${data.hourly[i].precip}%</td>
-                                <td>Weather: ${data.hourly[i].weather}</td>
+                                <td>${data.fiveday[i].day}</td>
+                                <td>High of ${data.fiveday[i].temphigh}°F</td>
+                                <td>Low of ${data.fiveday[i].templow}°F</td>
+                                <td>Precipitation Chance: ${data.fiveday[i].precip}%</td>
+                                <td>Weather: ${data.fiveday[i].weather}</td>
                             </tr>
                         </table>
                     </div>
