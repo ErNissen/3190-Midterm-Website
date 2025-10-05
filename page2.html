@@ -1,66 +1,104 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Full Month Calendar</title>
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Full Month Calender</title>
-        <link rel="stylesheet" href="./style.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style.css" />
 
-        <!--Bootstrap Stylesheet-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Bootstrap Stylesheet -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
 
-    </head>
-
-    <body>
-        <!--Navigation bar + website title-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">FastWeather</a>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-              <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="./calendar.html">Calendar</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="./page2.html">Page2</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./current.html">Current Weather</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./fiveday.html">5-Day Forecast</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-
-        <!--BEGIN PAGE CONTENT-->
-
-
-
-        <!--END PAGE CONTENT-->
-
-        <!--Footer with Author and FAQ page-->
-        <div class="container">
-          <footer class="py-3 my-4 bg-dar">
-            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-              <li class="nav-item">
-                <a href="./authors.html" class="nav-link px-2 text-body-secondary">Authors</a>
-              </li>
-              <li class="nav-item">
-                <a href="./faq.html" class="nav-link px-2 text-body-secondary">FAQ</a>
-              </li>
-            </ul>
-            <p class="text-center text-body-secondary">&copy; FastWeather</p>
-          </footer>
+  <body class="d-flex flex-column min-vh-100">
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">FastWeather</a>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./calendar.html">Today</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="./page2.html"
+                >Full Calendar</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./current.html">Current Weather</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./fiveday.html">5-Day Forecast</a>
+            </li>
+          </ul>
         </div>
+      </div>
+    </nav>
 
-        <script src="./page2.js"></script>
+    <!-- Main content -->
+    <main class="container mb-5">
+      <!-- Month Navigation -->
+      <div
+        class="d-flex justify-content-between align-items-center mb-3 flex-wrap"
+      >
+        <button id="prevMonth" class="btn btn-outline-primary">
+          &lt; Prev
+        </button>
+        <h2 id="monthYear" class="text-center mb-0">October 2025</h2>
+        <button id="nextMonth" class="btn btn-outline-primary">
+          Next &gt;
+        </button>
+      </div>
 
-        <!--Bootstrap Javascript-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    </body>
+      <!-- Calendar Grid -->
+      <div class="calendar-grid border rounded">
+        <div
+          class="row fw-bold text-center bg-light py-2 border-bottom text-uppercase"
+        >
+          <div class="col">Sun</div>
+          <div class="col">Mon</div>
+          <div class="col">Tue</div>
+          <div class="col">Wed</div>
+          <div class="col">Thu</div>
+          <div class="col">Fri</div>
+          <div class="col">Sat</div>
+        </div>
+        <div id="calendarDays" class="calendar-body"></div>
+      </div>
+    </main>
 
+    <!-- Footer -->
+    <div class="container mt-auto">
+      <footer class="py-3 my-4 bg-dark text-light rounded">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item">
+            <a href="./authors.html" class="nav-link px-2 text-light">Authors</a>
+          </li>
+          <li class="nav-item">
+            <a href="./faq.html" class="nav-link px-2 text-light">FAQ</a>
+          </li>
+        </ul>
+        <p class="text-center">&copy; FastWeather</p>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./page2.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

@@ -85,3 +85,70 @@ background-color: lightgray;
   flex: 1;
   margin-right: 10px;
 }
+
+.calendar-body .row {
+  min-height: 100px;
+}
+
+.calendar-body .col {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dee2e6;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.calendar-body .col:hover {
+  background-color: #e9ecef;
+  cursor: pointer;
+}
+
+.bg-primary.rounded {
+  border-radius: 8px !important;
+}
+
+/* Month cells */
+.calendar-cell {
+  position: relative;
+  height: 120px;              /* adjust to taste */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Day number in top-left */
+.day-num {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.day-num.today {
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.2);
+}
+
+/* Forecast stack in center */
+.day-forecast {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.weather-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.temp-small {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
