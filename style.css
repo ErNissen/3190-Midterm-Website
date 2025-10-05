@@ -68,3 +68,20 @@ background-color: #f9f9f9;
 .btn{
 background-color: lightgray;
 }
+
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-group-item .btn-group {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.list-group-item .event-text {
+  flex: 1;
+  margin-right: 10px;
+}
