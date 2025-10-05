@@ -15,6 +15,21 @@ function appendData(data){
     for(let i = 0; i<data.fiveday.length; i++){
         let mainContainer = document.getElementById("hourCard");
         let div = document.createElement("div");
+
+        let icon;
+
+        switch(data.fiveday[i].weather){
+            case "Sunny":
+                icon = "assets/images/clear-day.png";
+                break;
+            case "Rain":
+                icon = "assets/images/rain.png";
+                break;
+            case "Partly Cloudy":
+                icon = "assets/images/partly-cloudy-day.png"
+                break;
+        }
+
         div.innerHTML = ` 
             <div class="accordion" id="weatherCard">
                 <div class="accordion-item">
@@ -29,8 +44,9 @@ function appendData(data){
                                 <tr>
                                     <td>High of ${data.fiveday[i].temphigh}°F</td>
                                     <td>Low of ${data.fiveday[i].templow}°F</td>
-                                    <td>Precipitation Chance: ${data.fiveday[i].precip}%</td>
+                                    <td>Precipitation: ${data.fiveday[i].precip}%</td>
                                     <td>Weather: ${data.fiveday[i].weather}</td>
+                                    <td><img src="${icon}" alt="Weather Icon" height=75px width=75px></td>
                                 </tr>
                             </table>
                         </div>
