@@ -53,3 +53,18 @@ button:hover {
     margin-bottom: 0;
     display: none;
 }
+
+.questions{
+background-color: white;
+}
+.question-body{
+padding: 15px;
+border: 1px solid black;
+margin-top: 8px;
+border-radius: 4px;
+background-color: #f9f9f9;
+
+}
+.btn{
+background-color: lightgray;
+}
