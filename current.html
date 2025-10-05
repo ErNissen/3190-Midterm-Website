@@ -41,6 +41,8 @@
           </div>
         </nav>
 
+        <!--BEGIN PAGE CONTENT-->
+
         <div class="d-flex gap-2 justify-content-center bg-light py-5">
           <h1>Current Weather</h1>
         </div>
@@ -49,12 +51,14 @@
             <input type="text" id="city" placeholder="Enter city">
             <button onclick="getWeather()">Search</button>
 
+            <!--the <img> and two <div>s below are populated using getWeather()-->
             <img id="weather-icon">
-
             <div id="temp-div"></div>
             <div id="weather-info"></div>
           </div>
         </div>
+
+        <!--END PAGE CONTENT-->
 
 		<!--Footer with Author and FAQ page-->
     	<div class="container">

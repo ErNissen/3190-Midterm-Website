@@ -1,23 +1,27 @@
+//Fetches data from forecast.json
 function fetchData(){
     fetch("forecast.json")
         .then(function (response){
             return response.json();
         })
         .then(function (data){
+            //Calls appendData() function
             appendData(data);
         })
         .catch(function (err){
             console.log('error: ' + err);
         });
 }
-    
+
+//Ultimately adds elements to fiveday.html depending on how many fiveday objects there are in forecast.json
 function appendData(data){
     for(let i = 0; i<data.fiveday.length; i++){
         let mainContainer = document.getElementById("hourCard");
         let div = document.createElement("div");
-
         let icon;
 
+        //Determine which icon to use
+        //Only three to match what is made-up in forecast.json
         switch(data.fiveday[i].weather){
             case "Sunny":
                 icon = "assets/images/clear-day.png";
@@ -30,6 +34,7 @@ function appendData(data){
                 break;
         }
 
+        //Populates the webpage with accordion dropdowns for each day of weather
         div.innerHTML = ` 
             <div class="accordion" id="weatherCard">
                 <div class="accordion-item">
@@ -55,6 +60,9 @@ function appendData(data){
             </div>
         `;
         mainContainer.appendChild(div);
+        
+        //Disables the button after being ran
+        //Prevents populating the page with the same information multiple times
         document.getElementById("getWeather").disabled = true;
     };
 }

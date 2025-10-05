@@ -51,11 +51,14 @@
           </div>
         </nav>
 
+        <!--BEGIN PAGE CONTENT-->
         <div class="d-flex gap-2 justify-content-center bg-light py-5">
             <h1>5-Day Forecast</h1>
         </div>
 
         <div class="d-flex gap-2 justify-content-center bg-light py-5">
+            <!--Button calls fetchData from fiveday.js-->
+            <!--Button is disabled after being clicked-->
             <button onclick="fetchData()" id="getWeather" class="btn btn-secondary rounded-pill px-3 justify-content-center" type="button">
                 Get Weather
             </button>
@@ -65,9 +68,11 @@
         <div class="album py-5 bg-body-tertiary">
           <div class="container">
             <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 g-3" id="hourCard">
-            <!--Elements are populated here from hourly.js--></div>
+            <!--Elements are populated here from fiveday.js--></div>
           </div>
         </div>
+
+        <!--END PAGE CONTENT-->
 
         <!--Footer with Author and FAQ page-->
     	  <div class="container">
