@@ -1,5 +1,5 @@
 // ----------------------------
-// 📅 FULL MONTH CALENDAR + DAILY WEATHER
+//  FULL MONTH CALENDAR + DAILY WEATHER
 // ----------------------------
 
 // DOM references
@@ -13,7 +13,7 @@ let currentDate = new Date();
 const apiKey = "2249fbbe6fb49e3aabdbee25442e1d57";
 
 // ----------------------------
-// 🌦️ WEATHER ICON MAP
+//  WEATHER ICON MAP
 // ----------------------------
 function getWeatherIcon(condition) {
   const c = (condition || "").toLowerCase();
@@ -30,14 +30,14 @@ function getWeatherIcon(condition) {
 }
 
 // ----------------------------
-// 🗓️ UTILITIES
+//  UTILITIES
 // ----------------------------
 function keyForDate(d) {
   return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
 }
 
 // ----------------------------
-// 🌍 LOCATION HELPERS
+//  LOCATION HELPERS
 // ----------------------------
 function getCoords() {
   return new Promise((resolve) => {
@@ -51,7 +51,7 @@ function getCoords() {
 }
 
 // ----------------------------
-// 🌦️ FETCH WEATHER DATA
+//  FETCH WEATHER DATA
 // ----------------------------
 async function fetchDailyForecast() {
   try {
@@ -85,7 +85,7 @@ async function fetchDailyForecast() {
 }
 
 // ----------------------------
-// 🧩 FALLBACK: MOCK DATA JSON
+//  FALLBACK: MOCK DATA JSON
 // ----------------------------
 async function fetchMockForecast() {
   try {
@@ -113,7 +113,7 @@ async function fetchMockForecast() {
 }
 
 // ----------------------------
-// 🧱 CALENDAR RENDERING
+//  CALENDAR RENDERING
 // ----------------------------
 function renderCalendar(date, forecastMap = {}) {
   calendarDays.innerHTML = "";
@@ -186,7 +186,7 @@ function renderCalendar(date, forecastMap = {}) {
 }
 
 // ----------------------------
-// 🔄 MONTH NAVIGATION
+//  MONTH NAVIGATION
 // ----------------------------
 prevMonthBtn.addEventListener("click", () => {
   currentDate.setMonth(currentDate.getMonth() - 1);

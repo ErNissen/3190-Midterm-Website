@@ -1,5 +1,5 @@
 // ----------------------------
-// 🗓️ DATE + FACT OF THE DAY
+// DATE + FACT OF THE DAY
 // ----------------------------
 const today = new Date();
 document.getElementById("todays_date").innerText = today.toDateString();
@@ -24,7 +24,7 @@ fetch("dayEvents.json")
   });
 
 // ----------------------------
-// ✅ EVENT MANAGEMENT
+// EVENT MANAGEMENT
 // ----------------------------
 
 // DOM references
@@ -77,7 +77,7 @@ function renderEvents() {
     const btnGroup = document.createElement("div");
     btnGroup.classList.add("btn-group");
 
-    // ✅ Complete button
+    // Complete button
     const completeBtn = document.createElement("button");
     completeBtn.textContent = event.completed ? "[✔]" : "[]";
     completeBtn.classList.add("btn", "btn-sm", "btn-outline-success");
@@ -88,10 +88,10 @@ function renderEvents() {
     };
     btnGroup.appendChild(completeBtn);
 
-    // ❌ Delete button
+    // Delete button
     if (!event.isDefault) {
       const deleteBtn = document.createElement("button");
-      deleteBtn.textContent = "❌";
+      deleteBtn.textContent = "X";
       deleteBtn.classList.add("btn", "btn-sm", "btn-outline-danger");
       deleteBtn.onclick = () => {
         userEvents.splice(index - defaultEvents.length, 1);
